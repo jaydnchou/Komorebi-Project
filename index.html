@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Komorebi Cafe | Project</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Muli:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body data-spy="scroll" data-target="#menu" data-offset="100">
+    
+    <!-- Reservation List Template
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script id="reservation-template" type="text/x-handlebars-template">
+      <tr>
+        <td>{{name}}</td>
+        <td>{{day}}</td>
+      </tr>
+    </script>
+
+    <!-- Navbar
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded">
+      <div class="container my-1">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div  id="navbarNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto float-right">
+            <li class="nav-item">
+              <a class="nav-link ml-4" href="#menu">menu</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-4" href="#bookings">bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-4" href="#location">location</a>
+            </li>
+            <li class="nav-item ml-4">
+              <a class="nav-link" style="color: #ff4444" href="#map">contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div><!--/container-->
+    </nav> <!--/nav bar-->
+
+    <!-- Hero Image
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="jumbotron">
+      <div class="transbox container-fluid py-5">
+        <h1 class="display-3 container">K O M O R E B I</h1>
+        <h3 class="container">t e a h o u s e</h3>
+        <div class="container">
+          <a class="btn btn-danger btn-lg" href="#bookings" role="button">Book now</a>
+        </div>
+      </div>
+    </div><!--/.jumbotron -->
+
+    <!-- Menu Section
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="menu" class="container">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active item">
+            <img class="d-block img-fluid" src="images/food-4.jpg" alt="gyoza">
+          </div>
+          <div class="carousel-item item">
+            <img class="d-block img-fluid" src="images/food-6.jpg" alt="tea">
+          </div>
+          <div class="carousel-item item">
+            <img class="d-block img-fluid" src="images/barista.jpeg" alt="barista">
+          </div>
+          <div class="carousel-item item">
+            <img class="d-block img-fluid" src="images/food-7.jpg" alt="coffee">
+          </div>
+        </div><!--/.carousel-inner -->  
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a><!--/.carousel-contorl-prev-->
+      </div><!--/.carousel -->
+    </div><!--/.container -->
+
+    <!-- Reservation Card
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="bookings" class="container">
+      <div class="card card-outline-secondary">
+          <div class="card-header">
+              <h3 class="mb-0">Book a table with us today</h3>
+          </div>
+          <div class="card-block reservation-form polaroid">
+              <form class="form reservations" role="form" autocomplete="off">
+                  <div class="form-group">
+                      <label class="col-form-label" for="username">Name</label>
+                      <input type="text" class="form-control reservation-name" placeholder="please provide your full name">
+                  </div>
+                  <!--<div class="form-group">
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                        Select A Day
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu reservation-day">
+                        <li><a>Today</a></li>
+                        <li><a>Tomorrow</a></li>
+                        <li><a>The day after next</a></li>
+                      </ul>
+                    </div>
+                  </div>-->
+                  <div class="form-group">
+                      <label class="col-form-label" for="date-time">Select Date</label>
+                      <input type="date" class="form-control reservation-day" name="date-time">
+                  </div>
+                  <button type="submit" class="btn btn-danger btn-md float-left  reservation-button">submit</button>
+              </form>
+          </div><!--/.card-block-->
+      </div><!--/.reservation card -->
+    </div><!--/.container -->
+    
+    <!-- Table View
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <table class="table table-hover table-responsive">
+        <thead>
+          <th>Name</th>
+          <th>Booking</th>
+        </thead>
+        <tbody class="reservation-list"></tbody>
+      </table>
+    </div>
+    
+    <!-- Maps Section 
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container mb-4">
+      <h2>Our Location</h2>
+      <p>OPEN MONDAY - FRIDAY</p>
+      <p>7AM - 4PM</p>
+    </div>
+
+    <div id="location"class="container">
+      <div id="map"></div>
+    </div>
+    
+    <!-- Customer Reviews Section
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container mt-5">
+      <h2 class="text-center">Our Customers</h2>
+        <div class="card-deck mb-5 mt-4">
+          <div class="card rounded">
+            <img class="card-img-top img-fluid rounded polaroid" src="images/profile-card-1.jpg" alt="wedding-project">
+            <div class="card-block">
+              <h4 class="card-title">Dean Smith</h4>
+              <p class="card-text">Best coffee in the area. I drop by every morning before work.</p>
+            </div>
+          </div>
+          <div class="card rounded">
+            <img class="card-img-top img-fluid rounded polaroid" src="images/profile-card-2.jpg" alt="car-project">
+            <div class="card-block">
+              <h4 class="card-title">Chloe Johnson</h4>
+              <p class="card-text">Their matcha green tea is amazing!</p>
+            </div>
+          </div>
+          <div class="card rounded">
+            <img class="card-img-top img-fluid rounded polaroid" src="images/profile-card-3.jpg" alt="project">
+            <div class="card-block">
+              <h4 class="card-title">Jane Li</h4>
+              <p class="card-text">Love it!</p>
+            </div>
+          </div>
+        </div><!--/.card-deck-->
+    </div><!--/.container -->
+
+    <!-- Footer
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <footer class="my-3">
+        <p class="text-center mb-1">&copy 2017 komorebi | all rights reserved</p>
+      </footer><!--/.footer-->
+    </div><!--/.container-->
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <!-- Tether -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- Google Maps API Key -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOwh52Ry3btoX-MbRGG1C50SCAAH1Oyc&callback=initMap"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
