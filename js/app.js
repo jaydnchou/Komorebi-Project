@@ -1,5 +1,3 @@
-var reservationData = {};
-
 // Initialize Firebase
 var config = {
 apiKey: "AIzaSyAzyxZ1l_5rolG_KkLIe-86QXpWAsAtjn0",
@@ -14,8 +12,11 @@ var database = firebase.database();
 
 /////////////////////////////////////////////////////////
 
-// Get Reservation Day Data
-$('.reservation-day').click(function() {
+var reservationData = {};
+
+
+// Get Reservation-Day Data
+$('.reservation-day').on('change', function() {
     reservationData.day = $(this).val();
 });// end event listener
 
@@ -29,9 +30,9 @@ $('.reservations').on('submit', function(event) {
 });// end event listener
 
 
-// Add each Reservation and Update View *** NOT WORKING ***
+// Add each Reservation and Update View
 database.ref('reservations').on('child_added', function(snapshot) {
-    // grab element to hook up to
+    // get element 
     var reservationList = $('.reservation-list');
     // get data from db
     var reservations = snapshot.val();
@@ -39,12 +40,13 @@ database.ref('reservations').on('child_added', function(snapshot) {
     var source = $('#reservation-template').html();
     // compile template
     var template = Handlebars.compile(source);
-    // pass data to template to be evaluated within Handlebars as template is created
+    // pass data to template to be evaluated within Handlebars
     var reservationTemplate = template(reservations);
-    // append template to list
+    // insert data into page
     reservationList.append(reservationTemplate);
 })
 
+/////////////////////////////////////////////////////////
 
 // Create Map - Google Maps API 
 function initMap () {
@@ -60,4 +62,3 @@ function initMap () {
         animation:google.maps.Animation.BOUNCE
     });
 }
-

@@ -4,7 +4,7 @@ body {
 	background-color: white;
 }
 
-a, h2, h3, blockquote, .navbar, button, p {
+a, h2, h3, blockquote, .navbar, button, p, table, #bookings, .footer, .card-text, .card-title {
 	font-family: "Muli", sans-serif;
 }
 
@@ -16,7 +16,9 @@ h2, p {
 .rounded {
 	border-radius: 1em;
 }
-
+.polaroid {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 /********* NAVIGATION **********/
 
 .scrollspy-example {
@@ -52,7 +54,6 @@ div.transbox {
 .item {
 height: 800px;
 }
-
 .item img {
 max-height: 100%;  
 max-width: 100%; 
@@ -67,23 +68,33 @@ margin: auto;
 	text-align: left;
 }
 #bookings {
-	width: 40%;
-	font-family: "Muli", sans-serif;
 	position: center;
+	width: 50vh;
 }
-.polaroid {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
 }
+table {
+	table-layout: fixed;
+	width: 250px;
+}
+th {
+	background-color: #f2f2f2;
+	color: black;
+}
+td {
+	width: 100%;
+}
+
 .card {
 	border: none;
 }
 .card-text, .card-title {
 	text-align: center;
-	font-family: "Muli", sans-serif;
 }
 .footer {
 	text-align: left;
-	font-family: "Muli", sans-serif;
 	background-color: lightgrey;
 }
  #map {
@@ -91,21 +102,10 @@ margin: auto;
    height: 400px;
  }
 
-/********* MEDIA QUERIES **********
+/********* MEDIA QUERIES **********/
 
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575px) { ... }
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... } */
-
-
+@media (max-width:800px) {
+    #carouselExampleControls {
+        display:none;
+    }
+}

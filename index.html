@@ -9,7 +9,6 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Muli:400,400i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
@@ -96,30 +95,18 @@
     <div id="bookings" class="container">
       <div class="card card-outline-secondary">
           <div class="card-header">
-              <h3 class="mb-0">Book a table with us today</h3>
+              <h3>Book a table with us today</h3>
           </div>
           <div class="card-block reservation-form polaroid">
               <form class="form reservations" role="form" autocomplete="off">
                   <div class="form-group">
                       <label class="col-form-label" for="username">Name</label>
-                      <input type="text" class="form-control reservation-name" placeholder="please provide your full name">
+                      <input type="text" class="form-control reservation-name" placeholder="full name">
                   </div>
-                  <!--<div class="form-group">
-                    <div class="dropdown">
-                      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-                        Select A Day
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu reservation-day">
-                        <li><a>Today</a></li>
-                        <li><a>Tomorrow</a></li>
-                        <li><a>The day after next</a></li>
-                      </ul>
-                    </div>
-                  </div>-->
+
                   <div class="form-group">
                       <label class="col-form-label" for="date-time">Select Date</label>
-                      <input type="date" class="form-control reservation-day" name="date-time">
+                      <input type="date" class="form-control reservation-day">
                   </div>
                   <button type="submit" class="btn btn-danger btn-md float-left  reservation-button">submit</button>
               </form>
@@ -129,12 +116,12 @@
     
     <!-- Table View
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container">
+    <div class="container mt-5">
+      <h2>current reservations</h2>
       <table class="table table-hover table-responsive">
         <thead>
           <th>Name</th>
           <th>Booking</th>
-        </thead>
         <tbody class="reservation-list"></tbody>
       </table>
     </div>
@@ -142,7 +129,7 @@
     <!-- Maps Section 
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container mb-4">
-      <h2>Our Location</h2>
+      <h2>our location</h2>
       <p>OPEN MONDAY - FRIDAY</p>
       <p>7AM - 4PM</p>
     </div>
@@ -154,7 +141,7 @@
     <!-- Customer Reviews Section
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container mt-5">
-      <h2 class="text-center">Our Customers</h2>
+      <h2 class="text-center">our customers</h2>
         <div class="card-deck mb-5 mt-4">
           <div class="card rounded">
             <img class="card-img-top img-fluid rounded polaroid" src="images/profile-card-1.jpg" alt="wedding-project">
@@ -190,16 +177,17 @@
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <!-- Handlebars -->
+    <script src="js/handlebars-v4.0.5.js"></script>
     <!-- Tether -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <!-- Bootstrap 4 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <!-- Google Maps API Key -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOwh52Ry3btoX-MbRGG1C50SCAAH1Oyc&callback=initMap"></script>
     <!-- Custom JS -->
     <script src="js/app.js"></script>
+    <!-- Google Maps API Key -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOwh52Ry3btoX-MbRGG1C50SCAAH1Oyc&callback=initMap"></script>
   </body>
 </html>
